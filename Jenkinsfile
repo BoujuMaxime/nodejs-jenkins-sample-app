@@ -32,7 +32,7 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                sh 'docker build .'
+                sh 'docker build -t DOCKER_IMAGE:DOCKER_TAG .'
             }
         }
         
@@ -41,8 +41,8 @@ pipeline {
             // Arrêter l'ancien conteneur s'il existe 
             // Démarrer le nouveau conteneur avec la nouvelle version
             steps {
-                sh 'docker rm DOCKER_IMAGE:DOCKER_TAG'
-                sh 'docker run DOCKER_IMAGE:DOCKER_TAG'
+                sh 'docker compose down'
+                sh 'docker compose up -d --buid'
             }
         }
     }
