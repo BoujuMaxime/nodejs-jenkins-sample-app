@@ -42,7 +42,7 @@ pipeline {
             // Démarrer le nouveau conteneur avec la nouvelle version
             steps {
                 sh 'docker compose down'
-                sh 'docker compose up -d --buid'
+                sh 'docker compose up -d --build'
             }
         }
     }
