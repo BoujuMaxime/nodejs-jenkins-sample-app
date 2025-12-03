@@ -36,11 +36,15 @@ pipeline {
             }
         }
         
-        //stage('Deploy') {
+        stage('Deploy') {
             // TODO: Déployer le conteneur
             // Arrêter l'ancien conteneur s'il existe 
             // Démarrer le nouveau conteneur avec la nouvelle version
-        //}
+            steps {
+                sh 'docker rm .'
+                sh 'docker run'
+            }
+        }
     }
     
     //post {
