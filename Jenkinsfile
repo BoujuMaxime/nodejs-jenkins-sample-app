@@ -14,22 +14,24 @@ pipeline {
         }
         
         stage('Install Dependencies') {
-            sh 'npm install '
+            steps {
+                sh 'npm install '
+            }
         }
         
-        stage('Run Tests') {
+        //stage('Run Tests') {
             // TODO: Lancer les tests
-        }
+        //}
         
-        stage('Build Docker Image') {
+        //stage('Build Docker Image') {
             // TODO: Construire l'image Docker
-        }
+        //}
         
-        stage('Deploy') {
+        //stage('Deploy') {
             // TODO: Déployer le conteneur
             // Arrêter l'ancien conteneur s'il existe 
             // Démarrer le nouveau conteneur avec la nouvelle version
-        }
+        //}
     }
     
     post {
