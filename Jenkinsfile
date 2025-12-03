@@ -8,11 +8,11 @@ pipeline {
     
     stages {
         stage('Checkout') {
-            // TODO: Récupérer le code source
+            sh 'git pull'
         }
         
         stage('Install Dependencies') {
-            // TODO: Installer les dépendances
+            sh 'npm install '
         }
         
         stage('Run Tests') {
