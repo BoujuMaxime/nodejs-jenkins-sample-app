@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    tools { 
+        nodejs "Default" 
+    }
     
     environment {
         DOCKER_IMAGE = "jenkins-demo-app"
