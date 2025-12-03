@@ -8,7 +8,9 @@ pipeline {
     
     stages {
         stage('Checkout') {
-            sh 'git pull'
+            steps {
+                sh 'git checkout scm'
+            }
         }
         
         stage('Install Dependencies') {
