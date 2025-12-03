@@ -30,9 +30,9 @@ pipeline {
             }
         }
         
-        //stage('Build Docker Image') {
-            // TODO: Construire l'image Docker
-        //}
+        stage('Build Docker Image') {
+            sh 'docker build .'
+        }
         
         //stage('Deploy') {
             // TODO: Déployer le conteneur
