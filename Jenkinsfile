@@ -41,7 +41,7 @@ pipeline {
             // Arrêter l'ancien conteneur s'il existe 
             // Démarrer le nouveau conteneur avec la nouvelle version
             steps {
-                sh 'docker rm .'
+                sh 'docker rm'
                 sh 'docker run'
             }
         }
