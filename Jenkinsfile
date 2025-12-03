@@ -41,8 +41,8 @@ pipeline {
             // Arrêter l'ancien conteneur s'il existe 
             // Démarrer le nouveau conteneur avec la nouvelle version
             steps {
-                sh 'docker rm'
-                sh 'docker run'
+                sh 'docker rm DOCKER_IMAGE:DOCKER_TAG'
+                sh 'docker run DOCKER_IMAGE:DOCKER_TAG'
             }
         }
     }
