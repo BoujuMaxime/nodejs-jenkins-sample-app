@@ -23,9 +23,12 @@ pipeline {
             }
         }
         
-        //stage('Run Tests') {
+        stage('Run Tests') {
             // TODO: Lancer les tests
-        //}
+            steps {
+                sh 'npm test'
+            }
+        }
         
         //stage('Build Docker Image') {
             // TODO: Construire l'image Docker
